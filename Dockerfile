@@ -1,4 +1,4 @@
-FROM node:12.14.1-alpine3.10
+FROM node:14.4.0-alpine3.10
 
 ARG TIMEZONE="UTC"
 RUN set +x && apk add --no-cache tzdata bash \
