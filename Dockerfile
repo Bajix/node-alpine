@@ -1,4 +1,4 @@
-FROM node:14.4.0-alpine3.10
+FROM node:14.4.0-alpine3.12
 
 ARG TIMEZONE="UTC"
 RUN set +x && apk add --no-cache tzdata bash \
@@ -7,6 +7,6 @@ RUN set +x && apk add --no-cache tzdata bash \
     && date \
     && apk del tzdata
 
-RUN apk --no-cache add --virtual builds-deps autoconf automake build-base libtool nasm python zlib-dev
+RUN apk --update-cache add --virtual builds-deps autoconf automake build-base libtool nasm python2 zlib-dev
 
 CMD ["/bin/bash"]
