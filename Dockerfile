@@ -9,4 +9,6 @@ RUN set +x && apk add --no-cache tzdata bash \
 
 RUN apk --update-cache add --virtual builds-deps autoconf automake build-base libtool nasm python2 zlib-dev
 
+RUN yarn global add lerna
+
 CMD ["/bin/bash"]
